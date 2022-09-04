@@ -1,0 +1,114 @@
+.react-calendar {
+  width: 400px;
+  max-width: 100%;
+  background-color: #fff;
+  color: #222;
+  border: none;
+  border-radius: 8px;
+  box-shadow: 0 12px 24px rgba(0, 0, 0, 0.2);
+  font-family: Arial, Helvetica, sans-serif;
+  line-height: 1.125em;
+}
+
+.react-calendar__navigation button {
+  color: #3c3c3c;
+  min-width: 44px;
+  font-size: 16px;
+  font-weight: 600;
+  margin-top: 8px;
+}
+
+.react-calendar__navigation button:enabled:hover,
+.react-calendar__navigation button:disabled,
+.react-calendar__navigation button:enabled:focus {
+  background-color: transparent;
+}
+
+.react-calendar__navigation button[disabled] {
+  background-color: transparent;
+}
+
+abbr[title] {
+  text-decoration: none;
+}
+
+.react-calendar__tile:enabled:hover,
+.react-calendar__tile:enabled:focus {
+  background: #f8f8fa;
+  color: #6f48eb;
+  border-radius: 6px;
+}
+
+.react-calendar__tile--hasActive:enabled:hover,
+.react-calendar__tile--hasActive:enabled:focus {
+  background: #f8f8fa;
+}
+
+.react-calendar__tile--active abbr {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  padding-top: 3px;
+  background-color: #fd7900;
+  border-radius: 50%;
+  color: white;
+}
+
+.react-calendar__tile--active:enabled:hover,
+.react-calendar__tile--active:enabled:focus {
+  background-color: transparent;
+}
+
+.react-calendar__tile--now {
+  background: transparent;
+}
+
+.react-calendar__tile--now abbr {
+  display: block;
+  width: 22px;
+  height: 22px;
+  margin: 0 auto;
+  padding-top: 3px;
+  background-color: #3d3d3d;
+  border-radius: 50%;
+  color: white;
+}
+
+.react-calendar__tile--now:enabled:hover,
+.react-calendar__tile--now:enabled:focus {
+  background: #3c3c3c;
+  border-radius: 50%;
+  font-weight: bold;
+}
+
+.react-calendar--selectRange .react-calendar__tile--hover {
+  background-color: #f8f8fa;
+}
+
+.react-calendar__tile--range {
+  background: #f8f8fa;
+  color: transparent;
+  border-radius: 0;
+}
+
+.react-calendar__tile--rangeStart {
+  background: transparent;
+}
+
+.react-calendar__tile--rangeEnd {
+  background: transparent;
+}
+
+.dotContainer {
+  display: flex;
+  justify-content: center;
+  margin-top: 3px;
+}
+
+.dot {
+  height: 8px;
+  width: 8px;
+  background-color: #fdc56a;
+  border-radius: 50%;
+}
