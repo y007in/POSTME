@@ -5,8 +5,10 @@ import moment from "moment";
 import "react-calendar/dist/Calendar.css";
 import "./Calendar.css";
 
-function MyApp() {
-  const [value, onChange] = useState(new Date());
+const data = ["2022-08-09", "2022-09-01", "2022-09-05", "2022-09-12"];
+
+function Calender() {
+  const [date, setDate] = useState(new Date());
 
   return (
     <div>
@@ -26,7 +28,6 @@ function MyApp() {
           return <div className="dotContainer">{html}</div>;
         }}
       />
-      <p>{moment(date).format("YYYY년 MM월 DD일")}</p>
     </div>
   );
 }

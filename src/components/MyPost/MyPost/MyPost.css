@@ -1,0 +1,61 @@
+.postboxheader {
+  display: flex;
+}
+.mypostboxtext {
+  justify-content: start;
+  margin: 35px 0 0 20px;
+}
+
+.num {
+  width: 37px;
+  height: 24px;
+  margin: 36px 11px 0 8px;
+  font-family: NotoSansKR;
+  font-size: 16px;
+  color: #686868;
+}
+
+.all {
+  width: 80px;
+  height: 21px;
+  margin: 39px 14px 0 125px;
+  font-family: NotoSansKR;
+  font-size: 14px;
+  font-weight: 500;
+  background-color: transparent;
+  border-color: transparent;
+  color: #9a9a9a;
+  cursor: pointer;
+}
+.mypostbox {
+  width: 350px;
+  height: 262px;
+  margin: 28px 20px 0 20px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.mypostbox button {
+  background-color: transparent;
+  border-color: transparent;
+  width: 51.7px;
+  height: 49.1px;
+  margin: 0px 29.4px 23.9px 0;
+  object-fit: contain;
+}
+
+.logout {
+  width: 350px;
+  height: 59px;
+  margin: 183px 20px 37px 20px;
+  padding: 17px 141px 17px 141px;
+  border-radius: 7px;
+  border: solid 1px #fd7900;
+  background-color: #fff;
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 500;
+  color: #fd7900;
+  cursor: pointer;
+}

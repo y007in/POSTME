@@ -1,14 +1,13 @@
-import { Calendar } from "react-calendar";
-
-import Header from "../../components/Header";
-import Noquestion from "../../components/Question";
+import Header from "../../components/Header/Header";
+import Calendar from "../../components/Calendar/Calender";
+import Question from "../../components/Question/Question";
 
 const Main = () => {
   return (
     <div>
-      <Header headText={"헤더입니다"} />
+      <Header text={"3/10"} tex />
       <Calendar />
-      <Noquestion text={<h2>오늘의 질문</h2>} />
+      <Question />
     </div>
   );
 };

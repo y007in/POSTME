@@ -1,0 +1,59 @@
+header {
+  height: 85.5px;
+  display: flex;
+  align-items: center;
+  border-bottom: 1px solid #e5e5e5;
+  margin: 0 10px;
+}
+
+header > div {
+  display: flex;
+}
+
+header .left {
+  width: 1px;
+  justify-content: start;
+}
+
+header .right {
+  width: 79%;
+  justify-content: end;
+}
+
+header .progressnumber {
+  width: 15%;
+  justify-content: end;
+}
+
+header button {
+  width: 34px;
+  height: 34px;
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  margin-bottom: 10px;
+}
+
+header .progress {
+  background-color: #fd7900;
+  border-radius: 10px;
+  border: none;
+}
+
+header .progress::-webkit-progress-bar {
+  background-color: #ffffff;
+  border-radius: 10px;
+  border: none;
+}
+
+header .progress::-webkit-progress-value {
+  background-color: #fd7900;
+  border-radius: 10px;
+  border: none;
+}
+
+header .progress::-moz-progress-bar {
+  background-color: #fd7900;
+  border-radius: 10px;
+  border: none;
+}
