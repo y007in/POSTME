@@ -1,0 +1,26 @@
+.back2 {
+  background-color: transparent;
+  border-color: transparent;
+  cursor: pointer;
+  margin: 36px 0 0 20px;
+}
+.firstpostbox {
+  width: 101px;
+  height: 18px;
+  margin-top: 1px;
+  margin-left: 10px;
+}
+
+.download {
+  width: 17px;
+  height: 17px;
+  margin: 38px 20px 0 170px;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+}
+
+.first {
+  border-bottom: solid 1px #e5e5e5;
+  padding-bottom: 28.5px;
+}

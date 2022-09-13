@@ -1,0 +1,64 @@
+.downloadbox {
+  width: 334px;
+  height: 426px;
+  margin: 27.5px 28px 42px 28px;
+  padding: 7px 6.9px 6.1px 7px;
+  border-radius: 7px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  background-color: #fff;
+}
+
+.x {
+  border-bottom: 10px solid #efefef;
+}
+
+h2 {
+  height: 22px;
+  margin: 28px 0 15px 20px;
+  font-family: SDHoyoyoTTF;
+  font-size: 18px;
+  color: #3d3d3d;
+}
+.color {
+  margin: 10px 20px 0 20px;
+}
+.color button {
+  display: inline-block;
+  width: 52px;
+  height: 52px;
+  margin-left: 15px;
+  border: solid 1px #d0d0d0;
+  border-radius: 50px;
+  cursor: pointer;
+}
+
+.white {
+  background-color: #ffffff;
+}
+
+.orange {
+  background-color: #fd7900;
+}
+
+.green {
+  background-color: #21db1c;
+}
+.blue {
+  background-color: #00aeff;
+}
+.purple {
+  background-color: #5258dc;
+}
+.downloadbtn {
+  width: 350px;
+  height: 59px;
+  margin: 158px 20px 34px 20px;
+  padding: 15px 0 19px 0;
+  border-radius: 6px;
+  background-color: #fd7900;
+  border: transparent;
+  font-family: NotoSansKR;
+  font-size: 17px;
+  font-weight: bold;
+  color: #fff;
+}

@@ -43,6 +43,7 @@
   height: 49.1px;
   margin: 0px 29.4px 23.9px 0;
   object-fit: contain;
+  cursor: pointer;
 }
 
 .logout {

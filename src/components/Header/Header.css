@@ -38,22 +38,26 @@ header .progress {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 header .progress::-webkit-progress-bar {
   background-color: #ffffff;
   border-radius: 10px;
   border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 header .progress::-webkit-progress-value {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
 
 header .progress::-moz-progress-bar {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
+  box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }

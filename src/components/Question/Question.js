@@ -1,24 +1,45 @@
-import "./Question.css";
+import _, { cloneDeep } from "lodash";
+import { useSelector } from "react-redux";
 import store from "store-js";
+import moment from "moment";
 import { useState } from "react";
+
 import dummy from "../../Questionlist.json";
-import { useDispatch, useSelector } from "react-redux";
-import { questionActions } from "../../store/question-slice";
+import "./Question.css";
 
 const Question = () => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || "";
 
-  const [content, setContent] = useState("");
-  const dispatch = useDispatch();
-  const isReadOnly = useSelector((state) => state.question.isReadOnly);
-
+  const today = moment(new Date()).format("YYYY.MM.DD");
   const questionId = store.get("questionId");
-  if (questionId === undefined) store.set("questionId", { id: 0 });
+  const answerList = store.get("answer");
+  const getExist = store.get("exist");
+
+  const [content, setContent] = useState("");
+  const [exist, setExist] = useState(getExist);
+  const selectDate = useSelector((state) => state.calendar.date);
+
+  if (questionId === undefined) {
+    store.set("questionId", { id: 0 });
+    store.set("exist", false);
+  }
+
+  if (answerList !== undefined) {
+    const lastAnswerDate = answerList[answerList.length - 1].date;
+    if (lastAnswerDate !== today && getExist === true) {
+      setExist(false);
+      store.set("exist", false);
+    }
+  }
 
   const readOnlyHandler = () => {
-    if (!isReadOnly) {
-      return (
+    let selectQuestion;
+    let selectAnswer;
+
+    if (!exist) {
+      selectQuestion = dummy[questionId.id].Q;
+      selectAnswer = (
         <textarea
           className="answer"
           maxLength="100"
@@ -27,13 +48,80 @@ const Question = () => {
           onChange={(e) => setContent(e.target.value)}
         />
       );
+    } else {
+      const selectObj = answerList.find((x) => x.date === selectDate);
+
+      if (selectObj === undefined) {
+        selectQuestion = "질문이 없습니다.";
+        selectAnswer = (
+          <textarea
+            className="answer"
+            maxLength="100"
+            type="text"
+            value="답변이 없습니다."
+            onChange={(e) => setContent(e.target.value)}
+          />
+        );
+      } else {
+        selectQuestion = dummy[selectObj.id].Q;
+        selectAnswer = (
+          <textarea
+            className="answer"
+            maxLength="100"
+            type="text"
+            value={selectObj.answer}
+            onChange={(e) => setContent(e.target.value)}
+          />
+        );
+      }
     }
-    return <textarea className="answer" readOnly></textarea>;
+    return (
+      <>
+        <div className="qquestion">
+          <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
+          <p className="qq">{selectQuestion}</p>
+        </div>
+        <form onSubmit={submitHandler}>
+          {selectAnswer}
+          <div>
+            {!exist && ( //조건문 문법
+              <button type="submit" className="sendbutton">
+                보내기
+              </button>
+            )}
+          </div>
+        </form>
+      </>
+    );
   };
 
   const submitHandler = (e) => {
     e.preventDefault();
-    dispatch(questionActions.readOnly());
+
+    if (answerList === undefined) {
+      store.set("answer", [
+        {
+          id: questionId.id,
+          answer: content,
+          date: today,
+        },
+      ]);
+      store.set("exist", true);
+      setExist(true);
+    } else {
+      const newAnswer = cloneDeep(answerList);
+      newAnswer.push({
+        id: questionId.id,
+        answer: content,
+        date: today,
+      });
+      store.set("answer", newAnswer);
+      store.set("exist", true);
+      setExist(true);
+    }
+
+    const newId = ++questionId.id;
+    store.set("questionId", { id: newId });
   };
 
   return (
@@ -41,19 +129,8 @@ const Question = () => {
       <div className="todayq">
         {/* <img src={process.env.PUBLIC_URL + `Assets/todayq.png`} /> */}
         <img src={`${process.env.PUBLIC_URL}Assets/todayq.png`} />
-      </div>vdvdsvsdvsdvsdvsdv
-      <div className="qquestion">
-        <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
-        <p className="qq">{dummy[questionId.id].Q}</p>
       </div>
-      <form onSubmit={submitHandler}>
-        {readOnlyHandler()}
-        <div>
-          <button type="submit" className="sendbutton">
-            보내기
-          </button>
-        </div>
-      </form>
+      {readOnlyHandler()}
     </div>
   );
 };

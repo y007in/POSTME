@@ -4,7 +4,7 @@ import "./MyPage.css";
 import Profile from "../../components/Profile/Profile";
 import MyPost from "../../components/MyPost/MyPost/MyPost";
 
-const MyPage = ({}) => {
+const MyPage = () => {
   const navigator = useNavigate();
 
   return (
