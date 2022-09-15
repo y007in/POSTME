@@ -2,30 +2,30 @@ import "./Post.css";
 import store from "store-js";
 import PostboxHeader from "../../components/PostboxHeader/PostboxHeader";
 import { useLocation } from "react-router-dom";
+import Card from "../../components/Card/Card";
 
 const Post = () => {
   const answerList = store.get("answer");
   const location = useLocation();
-  const loca = location.state.num;
+  const num = location.state.num;
+
+  const stringNum = String(num);
+  const firstNum = Number(stringNum + "0");
+  const lastNum = Number(stringNum + "9");
+
+  const answerListArr = [];
+
+  for (let i = firstNum; i <= lastNum; i++) {
+    answerListArr.push(answerList[i]);
+  }
 
   return (
     <div>
       <PostboxHeader />
       <main className="box">
-        {answerList.map((v, i) => {
+        {answerListArr.map((v, i) => {
           const key = `post${i}`;
-          return (
-            <section key={key}>
-              <p>{v.date}</p>
-              <div className="answerbox">
-                <div className="q_question">
-                  <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
-                  <div className="questionbox">{v.question}</div>
-                </div>
-                <div className="subanswerbox">{v.answer}</div>
-              </div>
-            </section>
-          );
+          return <Card key={key} value={v} />;
         })}
       </main>
     </div>

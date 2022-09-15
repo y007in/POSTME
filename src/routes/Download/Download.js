@@ -24,7 +24,20 @@ const Download = () => {
   return (
     <div>
       <DownloadHeader />
-      <div className="downloadbox"></div>
+      <div className="downloadbox">
+        {colors.map((_, i) => {
+          if (isSelectColor[i]) {
+            const key = `postBoxImage${i}`;
+            return (
+              <img
+                src={`${process.env.PUBLIC_URL}Assets/download_${colors[i]}.png`}
+                className="downloadImage"
+                key={key}
+              />
+            );
+          }
+        })}
+      </div>
       <div className="x"></div>
 
       <h2>색상선택</h2>

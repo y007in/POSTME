@@ -11,10 +11,17 @@
   margin-left: 10px;
 }
 
+.share {
+  margin-left: 140px;
+  object-fit: contain;
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
+}
+
 .download {
   width: 17px;
   height: 17px;
-  margin: 38px 20px 0 170px;
   cursor: pointer;
   background-color: transparent;
   border-color: transparent;

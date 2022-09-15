@@ -1,11 +1,17 @@
 .downloadbox {
+  position: relative;
   width: 334px;
   height: 426px;
-  margin: 27.5px 28px 42px 28px;
+  margin: 27.5px 28px 42px 24px;
   padding: 7px 6.9px 6.1px 7px;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
+}
+
+.downloadImage {
+  width: 100%;
+  height: 100%;
 }
 
 .x {

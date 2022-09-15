@@ -2,6 +2,7 @@ import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import store from "store-js";
 import { useState } from "react";
+
 const Header = () => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || "";
@@ -13,14 +14,14 @@ const Header = () => {
     else return answerList.length % 10;
   };
 
+  const myPageClickHandler = () => {
+    navigate("/MyPage");
+  };
+
   return (
     <header>
       <div className="left">
-        <button
-          onClick={() => {
-            navigate("/MyPage");
-          }}
-        >
+        <button onClick={myPageClickHandler}>
           <img src={process.env.PUBLIC_URL + `Assets/profile.png`} />
         </button>
       </div>

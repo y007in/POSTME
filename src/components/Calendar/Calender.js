@@ -19,7 +19,7 @@ function Calender() {
 
   useEffect(() => {
     dispatch(calendarActions.selectDate(selectDate));
-  }, [selectDate]);
+  }, [dispatch, selectDate]);
 
   return (
     <div>
@@ -34,7 +34,8 @@ function Calender() {
         tileContent={({ date }) => {
           let html = [];
           if (data.find((x) => x === moment(date).format("YYYY.MM.DD"))) {
-            html.push(<div className="dot"></div>);
+            const key = `aa${moment(date).format("DD")}`;
+            html.push(<div key={key} className="dot"></div>);
           }
           return <div className="dotContainer">{html}</div>;
         }}

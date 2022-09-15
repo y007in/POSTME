@@ -18,6 +18,7 @@ const Question = () => {
 
   const [content, setContent] = useState("");
   const [exist, setExist] = useState(getExist);
+  const dispatch = useDispatch();
   const selectDate = useSelector((state) => state.calendar.date);
 
   if (questionId === undefined) {
