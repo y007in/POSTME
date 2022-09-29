@@ -11,37 +11,39 @@
 .qquestion {
   display: flex;
   align-items: center;
-  width: 350px;
+  width: 340px;
   height: 48px;
   margin: 26px 20px 1px 20px;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  padding-right: 10px;
 }
 
 .qquestion img {
-  margin: 0 15px;
+  margin: 0 10px;
 }
 
 .qq {
   font-family: NotoSansKR;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 800;
   color: #3d3d3d;
+  line-height: 20px;
 }
 
 .answer {
-  width: 350px;
+  width: 320px;
   height: 226px;
-  margin: 25px 20px 10px 25px;
-  padding: 0 0 0 0;
+  margin: 25px 20px 10px 20px;
+  padding: 15px 15px 0 15px;
   border-radius: 7px;
   border: none;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
   font-family: NotoSansKR;
   font-size: 14px;
-  font-weight: 500;
+  font-weight: 800;
   line-height: 1.5;
   color: #3d3d3d;
 }

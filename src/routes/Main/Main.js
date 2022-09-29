@@ -5,7 +5,7 @@ import Question from "../../components/Question/Question";
 const Main = () => {
   return (
     <div>
-      <Header text={"3"} />
+      <Header />
       <Calendar />
       <Question />
     </div>

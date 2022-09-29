@@ -1,16 +1,16 @@
-import "./Post.css";
+import "../Post/Post.css";
 import store from "store-js";
-import PostboxHeader from "../../components/PostboxHeader/PostboxHeader";
-import { useLocation } from "react-router-dom";
+import { useNavigate } from "react-router-dom";
 
-const Post = () => {
+const Total = () => {
   const answerList = store.get("answer");
-  const location = useLocation();
-  const loca = location.state.num;
+  const navigate = useNavigate();
 
   return (
     <div>
-      <PostboxHeader />
+      <button className="back2" onClick={() => navigate(-1)}>
+        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} />
+      </button>
       <main className="box">
         {answerList.map((v, i) => {
           const key = `post${i}`;
@@ -18,9 +18,9 @@ const Post = () => {
             <section key={key}>
               <p>{v.date}</p>
               <div className="answerbox">
-                <div className="q_question">
+                <div className="questionbox">
                   <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
-                  <div className="questionbox">{v.question}</div>
+                  {v.question}
                 </div>
                 <div className="subanswerbox">{v.answer}</div>
               </div>
@@ -32,4 +32,4 @@ const Post = () => {
   );
 };
 
-export default Post;
+export default Total;

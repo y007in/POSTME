@@ -1,5 +1,5 @@
 import _, { cloneDeep } from "lodash";
-import { useSelector } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import store from "store-js";
 import moment from "moment";
 import { useState } from "react";
@@ -98,27 +98,23 @@ const Question = () => {
   const submitHandler = (e) => {
     e.preventDefault();
 
+    const submitAnswerObj = {
+      id: questionId.id,
+      question: dummy[questionId.id].Q,
+      answer: content,
+      date: today,
+    };
+
     if (answerList === undefined) {
-      store.set("answer", [
-        {
-          id: questionId.id,
-          answer: content,
-          date: today,
-        },
-      ]);
-      store.set("exist", true);
-      setExist(true);
+      store.set("answer", [submitAnswerObj]);
     } else {
       const newAnswer = cloneDeep(answerList);
-      newAnswer.push({
-        id: questionId.id,
-        answer: content,
-        date: today,
-      });
+      newAnswer.push(submitAnswerObj);
       store.set("answer", newAnswer);
-      store.set("exist", true);
-      setExist(true);
     }
+
+    store.set("exist", true);
+    setExist(true);
 
     const newId = ++questionId.id;
     store.set("questionId", { id: newId });

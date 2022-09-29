@@ -23,6 +23,7 @@ header .right {
 header .progressnumber {
   width: 15%;
   justify-content: end;
+  font-weight: 800;
 }
 
 header button {

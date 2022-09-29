@@ -12,6 +12,7 @@
   margin: 36px 11px 0 8px;
   font-family: NotoSansKR;
   font-size: 16px;
+  font-weight: 800;
   color: #686868;
 }
 
@@ -59,4 +60,17 @@
   font-weight: 500;
   color: #fd7900;
   cursor: pointer;
+}
+.nomail {
+  padding: 40px 20px 40px 100px;
+}
+.nomail img {
+  width: 150px;
+}
+
+.nomail p {
+  font-family: NotoSansKR;
+  font-size: 16px;
+  font-weight: 800;
+  color: #686868;
 }

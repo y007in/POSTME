@@ -8,31 +8,13 @@ const MyPost = () => {
 
   const navigate = useNavigate();
   const answerList = store.get("answer");
-  // const answerLength = answerList.length;
+  const postboxLength = Math.floor(answerList.length / 10);
+  const openbox = new Array(postboxLength).fill(0);
 
-  // <button key={key} onClick={() => navigate("/Post")}>
-  //   <img src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`} />
-  // </button>
-
-  // <button>
-  //   <img src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`} />
-  // </button>
-
-  // const postBoxHandler = () => {
-  //   const yesmailboxLength = answerLength / 10;
-  //   const yesmailboxHTML =
-  //     '<button onClick={() => navigate("/Post")}><img src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`} /></button>';
-  //   const nomailboxHTML =
-  //     "<button><img src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`} /></button>";
-
-  //   if (yesmailboxLength <= 12) {
-  //     const nomailboxLength = 13 - yesmailboxLength;
-  //     const aa =
-  //       yesmailboxHTML.repeat(yesmailboxLength) +
-  //       nomailboxHTML.repeat(nomailboxLength);
-  //     return { __html: aa };
-  //   }
-  // };
+  const postboxClickHandler = (e) => {
+    const num = e.currentTarget.value;
+    navigate("/Post", { state: { num } });
+  };
 
   return (
     <main>
@@ -40,15 +22,28 @@ const MyPost = () => {
         <div className="mypostboxtext">
           <img src={`${process.env.PUBLIC_URL}Assets/postbox.png`} />
         </div>
-        <p className="num">()</p>
+        <p className="num">({openbox.length}개)</p>
 
-        <button className="all">전체보기</button>
+        <button className="all" onClick={() => navigate("/Total")}>
+          전체보기
+        </button>
       </div>
       <div className="mypostbox">
-        {" "}
-        <button onClick={() => navigate("/Post")}>
-          <img src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`} />{" "}
-        </button>
+        {openbox.length === 0 && (
+          <div className="nomail">
+            <img src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`} />
+            <p>아직 우체통이 없어요.</p>
+          </div>
+        )}
+        {openbox.length !== 0 &&
+          openbox.map((v, i) => {
+            const key = `postbox${i}`;
+            return (
+              <button key={key} value={i} onClick={postboxClickHandler}>
+                <img src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`} />
+              </button>
+            );
+          })}
       </div>
 
       <button className="logout">로그아웃</button>

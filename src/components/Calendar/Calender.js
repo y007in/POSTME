@@ -6,32 +6,16 @@ import "react-calendar/dist/Calendar.css";
 import "./Calendar.css";
 import { useDispatch } from "react-redux";
 import { calendarActions } from "../../store/calendar-slice";
-//import store from "store-js";
-
-//const answerList = store.get("answer");
-//const AnswerDate = answerList[answerList.length - 1].date;
-const data = [];
-// const [mark, setMark] = useState([]);
-// const {data} = useQuery(
-//   ["logDate", month],
-//   async () => {
-//     const result = await axios.get(
-//       `/api/healthLogs?health_log_type=DIET`
-//     );
-//     return result.data;
-//   },
-//   {
-//     onSuccess: (data: any) => {
-//       setMark(data);
-
-//     },
-//   }
-// );
+import store from "store-js";
 
 function Calender() {
   const dispatch = useDispatch();
   const [date, setDate] = useState(new Date());
   const selectDate = moment(date).format("YYYY.MM.DD");
+  const answerList = store.get("answer");
+  const data = [];
+
+  if (answerList !== undefined) answerList.map((v) => data.push(v.date));
 
   useEffect(() => {
     dispatch(calendarActions.selectDate(selectDate));

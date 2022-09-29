@@ -17,23 +17,30 @@ h2 {
   margin: 28px 0 15px 20px;
   font-family: SDHoyoyoTTF;
   font-size: 18px;
+  font-weight: 800;
   color: #3d3d3d;
 }
 .color {
-  margin: 10px 20px 0 20px;
+  margin: 10px 15px 0 11px;
 }
+
+.selectbtn {
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.3);
+  border: 5px solid #fff !important;
+}
+
 .color button {
   display: inline-block;
-  width: 52px;
-  height: 52px;
-  margin-left: 15px;
-  border: solid 1px #d0d0d0;
+  width: 62px;
+  height: 62px;
+  margin-left: 10px;
   border-radius: 50px;
   cursor: pointer;
+  border-color: transparent;
 }
 
 .white {
-  background-color: #ffffff;
+  background-color: #efefef;
 }
 
 .orange {

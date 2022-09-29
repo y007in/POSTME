@@ -1,20 +1,16 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import store from "store-js";
-const Header = ({ text }) => {
-  //https://www.codingfactory.net/11010
+import { useState } from "react";
+const Header = () => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || "";
   const navigate = useNavigate();
-  //const questionId = store.get("questionId");
   const answerList = store.get("answer");
 
   const Count = () => {
-    if (answerList === undefined) {
-      return "0";
-    } else {
-      return answerList.length;
-    }
+    if (answerList === undefined) return "0";
+    else return answerList.length % 10;
   };
 
   return (
