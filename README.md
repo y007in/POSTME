@@ -7,7 +7,7 @@
 
 <h5>실행 방법</h5>
 <p>1. repository clone</p>
-<p>git clone "https://github.com/yoojin4719/POSTME.git"
+<p>git clone https://github.com/y007in/POSTME.git
 <p>2. package 설치 </p>
 <p>npm install</p>
 <p>3. 실행</p>
