@@ -9,11 +9,12 @@ const DownloadHeader = () => {
   return (
     <div className="first">
       <button className="back2" onClick={() => navigate(-1)}>
-        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} />
+        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} alt="back" />
       </button>
       <img
         className="firstpostbox"
         src={`${process.env.PUBLIC_URL}Assets/firstpostbox.png`}
+        alt="firstpostbox"
       />
     </div>
   );

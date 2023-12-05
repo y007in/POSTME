@@ -1,61 +1,48 @@
 header {
-  height: 85.5px;
-  display: flex;
-  align-items: center;
+  width: 100%;
   border-bottom: 1px solid #e5e5e5;
-  margin: 0 10px;
 }
-
-header > div {
+.header_wrap {
+  width: 390px;
+  height: 80px;
   display: flex;
-}
+  justify-content: space-between;
+  align-items: center;
 
-header .left {
-  width: 1px;
-  justify-content: start;
+  padding: 0 10px;
 }
-
-header .right {
-  width: 79%;
-  justify-content: end;
-}
-
-header .progressnumber {
-  width: 15%;
-  justify-content: end;
-  font-weight: 800;
-}
-
-header button {
-  width: 34px;
-  height: 34px;
+header .goToProfile {
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;
-  margin-bottom: 10px;
 }
-
+header .right {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+header .progressNum {
+  font-weight: 800;
+}
 header .progress {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
-
 header .progress::-webkit-progress-bar {
   background-color: #ffffff;
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
-
 header .progress::-webkit-progress-value {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
-
 header .progress::-moz-progress-bar {
   background-color: #fd7900;
   border-radius: 10px;

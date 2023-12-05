@@ -8,7 +8,7 @@ const Card = (props) => {
       <p>{v.date}</p>
       <div className="answerbox">
         <div className="q_question">
-          <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
+          <img src={`${process.env.PUBLIC_URL}Assets/q.png`} alt="q" />
           <div className="questionbox">{v.question}</div>
         </div>
         <div className="subanswerbox">{v.answer}</div>

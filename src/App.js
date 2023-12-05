@@ -2,11 +2,11 @@ import { Routes, Route, BrowserRouter } from "react-router-dom";
 import "./reset.css";
 import "./App.css";
 
-import Main from "./routes/Main/Main";
-import MyPage from "./routes/MyPage/MyPage";
-import Post from "./routes/Post/Post";
-import Download from "./routes/Download/Download";
-import Total from "./routes/Total/Total";
+import Main from "./pages/Main/Main";
+import MyPage from "./pages/MyPage/MyPage";
+import Post from "./pages/Post/Post";
+import Download from "./pages/Download/Download";
+import Total from "./pages/Total/Total";
 
 function App() {
   return (

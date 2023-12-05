@@ -31,11 +31,13 @@ const Download = () => {
             return (
               <img
                 src={`${process.env.PUBLIC_URL}Assets/download_${colors[i]}.png`}
+                alt="download"
                 className="downloadImage"
                 key={key}
               />
             );
           }
+          return null;
         })}
       </div>
       <div className="x"></div>
@@ -50,7 +52,7 @@ const Download = () => {
               type="button"
               value={i}
               className={cx(v, { selectbtn: isSelectColor[i] })}
-              aria-label // 내용이 비어있을 때 사용하는 속성
+              aria-label={`Color Button ${i}`}
               onClick={colorBtnClickHandler}
             />
           );

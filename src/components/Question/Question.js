@@ -1,5 +1,5 @@
-import _, { cloneDeep } from "lodash";
-import { useDispatch, useSelector } from "react-redux";
+import { cloneDeep } from "lodash";
+import { useSelector } from "react-redux";
 import store from "store-js";
 import moment from "moment";
 import { useState } from "react";
@@ -18,7 +18,6 @@ const Question = () => {
 
   const [content, setContent] = useState("");
   const [exist, setExist] = useState(getExist);
-  const dispatch = useDispatch();
   const selectDate = useSelector((state) => state.calendar.date);
 
   if (questionId === undefined) {
@@ -76,29 +75,11 @@ const Question = () => {
         );
       }
     }
-    return (
-      <>
-        <div className="qquestion">
-          <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
-          <p className="qq">{selectQuestion}</p>
-        </div>
-        <form onSubmit={submitHandler}>
-          {selectAnswer}
-          <div>
-            {!exist && ( //조건문 문법
-              <button type="submit" className="sendbutton">
-                보내기
-              </button>
-            )}
-          </div>
-        </form>
-      </>
-    );
+    return { selectQuestion, selectAnswer };
   };
+  const { selectQuestion, selectAnswer } = readOnlyHandler();
 
-  const submitHandler = (e) => {
-    e.preventDefault();
-
+  const submitHandler = () => {
     const submitAnswerObj = {
       id: questionId.id,
       question: dummy[questionId.id].Q,
@@ -123,11 +104,23 @@ const Question = () => {
 
   return (
     <div className="question">
-      <div className="todayq">
-        {/* <img src={process.env.PUBLIC_URL + `Assets/todayq.png`} /> */}
-        <img src={`${process.env.PUBLIC_URL}Assets/todayq.png`} />
+      <span className="todayq">
+        <img src={`${process.env.PUBLIC_URL}Assets/todayq.png`} alt="todayq" />
+      </span>
+      <div className="qquestion">
+        <span>Q</span>
+        <p className="qq">{selectQuestion}</p>
       </div>
-      {readOnlyHandler()}
+      <form onSubmit={submitHandler}>
+        {selectAnswer}
+        <div>
+          {!exist && (
+            <button type="submit" className="sendbutton">
+              보내기
+            </button>
+          )}
+        </div>
+      </form>
     </div>
   );
 };

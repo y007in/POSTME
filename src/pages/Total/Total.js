@@ -3,13 +3,13 @@ import store from "store-js";
 import { useNavigate } from "react-router-dom";
 
 const Total = () => {
-  const answerList = store.get("answer");
+  const answerList = store.get("answer") || [];
   const navigate = useNavigate();
 
   return (
     <div>
       <button className="back2" onClick={() => navigate(-1)}>
-        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} />
+        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} alt="back" />
       </button>
       <main className="box">
         {answerList.map((v, i) => {
@@ -19,7 +19,10 @@ const Total = () => {
               <p>{v.date}</p>
               <div className="answerbox">
                 <div className="questionbox">
-                  <img src={`${process.env.PUBLIC_URL}Assets/q.png`} />
+                  <img
+                    src={`${process.env.PUBLIC_URL}Assets/q.png`}
+                    alt="questionBox"
+                  />
                   {v.question}
                 </div>
                 <div className="subanswerbox">{v.answer}</div>

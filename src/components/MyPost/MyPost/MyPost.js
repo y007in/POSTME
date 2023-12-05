@@ -7,8 +7,8 @@ const MyPost = () => {
   env.PUBLIC_URL = env.PUBLIC_URL || "";
 
   const navigate = useNavigate();
-  const answerList = store.get("answer");
-  const postboxLength = Math.floor(answerList.length / 10);
+  const answerList = store.get("answer") || [];
+  const postboxLength = Math.floor(answerList.length / 10) || 0;
   const openbox = new Array(postboxLength).fill(0);
 
   const postboxClickHandler = (e) => {
@@ -20,7 +20,10 @@ const MyPost = () => {
     <main>
       <div className="postboxheader">
         <div className="mypostboxtext">
-          <img src={`${process.env.PUBLIC_URL}Assets/postbox.png`} />
+          <img
+            src={`${process.env.PUBLIC_URL}Assets/postbox.png`}
+            alt="mypostboxtext"
+          />
         </div>
         <p className="num">({openbox.length}개)</p>
 
@@ -31,7 +34,10 @@ const MyPost = () => {
       <div className="mypostbox">
         {openbox.length === 0 && (
           <div className="nomail">
-            <img src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`} />
+            <img
+              src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`}
+              alt="nomailicon"
+            />
             <p>아직 우체통이 없어요.</p>
           </div>
         )}
@@ -40,7 +46,10 @@ const MyPost = () => {
             const key = `postbox${i}`;
             return (
               <button key={key} value={i} onClick={postboxClickHandler}>
-                <img src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`} />
+                <img
+                  src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`}
+                  alt="openboxicon"
+                />
               </button>
             );
           })}

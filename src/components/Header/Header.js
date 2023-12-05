@@ -1,7 +1,6 @@
 import { useNavigate } from "react-router-dom";
 import "./Header.css";
 import store from "store-js";
-import { useState } from "react";
 
 const Header = () => {
   const env = process.env;
@@ -20,15 +19,20 @@ const Header = () => {
 
   return (
     <header>
-      <div className="left">
-        <button onClick={myPageClickHandler}>
-          <img src={process.env.PUBLIC_URL + `Assets/profile.png`} />
-        </button>
+      <div className="header_wrap">
+        <div className="left">
+          <button className="goToProfile" onClick={myPageClickHandler}>
+            <img
+              src={process.env.PUBLIC_URL + `Assets/profile.png`}
+              alt="profile icon"
+            />
+          </button>
+        </div>
+        <div className="right">
+          <progress className="progress" value={Count()} max="10"></progress>
+          <p className="progressNum">{Count()}/10</p>
+        </div>
       </div>
-      <div className="right">
-        <progress className="progress" value={Count()} max="10"></progress>
-      </div>
-      <div className="progressnumber">{Count()}/10</div>
     </header>
   );
 };

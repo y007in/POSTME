@@ -10,7 +10,7 @@ const MyPage = () => {
   return (
     <div>
       <button className="back" onClick={() => navigator(-1)}>
-        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} />
+        <img src={`${process.env.PUBLIC_URL}Assets/back.png`} alt="back" />
       </button>
       <Profile />
       <MyPost />
