@@ -11,8 +11,7 @@ const Profile = () => {
       <img
         className="balloon"
         src={`${process.env.PUBLIC_URL}Assets/balloon1.png`}
-        alt="baloon
-        "
+        alt="baloon"
       />
     </div>
   );

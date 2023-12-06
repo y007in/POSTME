@@ -1,0 +1,10 @@
+.back {
+  width: 390px;
+  height: 70px;
+  display: flex;
+  align-items: center;
+  padding: 15px 20px;
+}
+.backBtn {
+  cursor: pointer;
+}

@@ -5,7 +5,7 @@ import { useLocation } from "react-router-dom";
 import Card from "../../components/Card/Card";
 
 const Post = () => {
-  const answerList = store.get("answer");
+  const answerList = store.get("answer") || [];
   const location = useLocation();
   const num = location.state.num;
 

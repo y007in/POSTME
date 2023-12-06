@@ -22,9 +22,11 @@ const Download = () => {
   };
 
   return (
-    <div>
-      <DownloadHeader />
-      <div className="downloadbox">
+    <div className="Download">
+      <div className="DownloadHeader_container">
+        <DownloadHeader />
+      </div>
+      <section className="downloadbox">
         {colors.map((_, i) => {
           if (isSelectColor[i]) {
             const key = `postBoxImage${i}`;
@@ -39,9 +41,8 @@ const Download = () => {
           }
           return null;
         })}
-      </div>
+      </section>
       <div className="x"></div>
-
       <h2>색상선택</h2>
       <div className="color">
         {colors.map((v, i) => {

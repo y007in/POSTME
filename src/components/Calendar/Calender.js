@@ -22,7 +22,7 @@ function Calender() {
   }, [dispatch, selectDate]);
 
   return (
-    <div>
+    <div className="calendar">
       <Calendar
         value={date}
         onChange={setDate}

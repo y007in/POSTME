@@ -1,17 +1,10 @@
-.back2 {
-  background-color: transparent;
-  border-color: transparent;
-  cursor: pointer;
-  margin: 36px 0 0 20px;
-}
-.firstpostbox {
-  width: 101px;
-  height: 18px;
-  margin-top: 1px;
-  margin-left: 10px;
+.downloadHeader {
+  display: flex;
+  align-items: center;
+  gap: 10px;
 }
 
-.first {
-  border-bottom: solid 1px #e5e5e5;
-  padding-bottom: 28.5px;
+.mailCount {
+  font-weight: bold;
+  font-size: 20px;
 }

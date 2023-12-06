@@ -8,7 +8,7 @@ const MyPost = () => {
 
   const navigate = useNavigate();
   const answerList = store.get("answer") || [];
-  const postboxLength = Math.floor(answerList.length / 10) || 0;
+  const postboxLength = Math.floor(answerList.length / 1) || 0;
   const openbox = new Array(postboxLength).fill(0);
 
   const postboxClickHandler = (e) => {
@@ -16,16 +16,23 @@ const MyPost = () => {
     navigate("/Post", { state: { num } });
   };
 
+  const handleLogout = () => {
+    const shouldLogout = window.confirm("로그아웃하시겠습니까?");
+
+    if (shouldLogout) {
+      alert("true 로그아웃되었습니다.");
+    }
+  };
   return (
-    <main>
+    <main className="mypost">
       <div className="postboxheader">
         <div className="mypostboxtext">
           <img
             src={`${process.env.PUBLIC_URL}Assets/postbox.png`}
             alt="mypostboxtext"
           />
+          <p className="num">({openbox.length}개)</p>
         </div>
-        <p className="num">({openbox.length}개)</p>
 
         <button className="all" onClick={() => navigate("/Total")}>
           전체보기
@@ -55,7 +62,9 @@ const MyPost = () => {
           })}
       </div>
 
-      <button className="logout">로그아웃</button>
+      <button className="logout" onClick={handleLogout}>
+        로그아웃
+      </button>
     </main>
   );
 };

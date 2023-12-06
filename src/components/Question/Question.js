@@ -104,23 +104,28 @@ const Question = () => {
 
   return (
     <div className="question">
-      <span className="todayq">
-        <img src={`${process.env.PUBLIC_URL}Assets/todayq.png`} alt="todayq" />
-      </span>
-      <div className="qquestion">
-        <span>Q</span>
-        <p className="qq">{selectQuestion}</p>
-      </div>
-      <form onSubmit={submitHandler}>
-        {selectAnswer}
-        <div>
-          {!exist && (
-            <button type="submit" className="sendbutton">
-              보내기
-            </button>
-          )}
+      <div className="question_wrap">
+        <span className="todayq">
+          <img
+            src={`${process.env.PUBLIC_URL}Assets/todayq.png`}
+            alt="todayq"
+          />
+        </span>
+        <div className="qquestion">
+          <span>Q</span>
+          <p className="qq">{selectQuestion}</p>
         </div>
-      </form>
+        <form onSubmit={submitHandler}>
+          {selectAnswer}
+          <div>
+            {!exist && (
+              <button type="submit" className="sendbutton">
+                보내기
+              </button>
+            )}
+          </div>
+        </form>
+      </div>
     </div>
   );
 };

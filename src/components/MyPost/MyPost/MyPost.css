@@ -1,15 +1,22 @@
+.mypost {
+  width: 390px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  padding: 20px;
+}
 .postboxheader {
   display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  margin: 30px 0 15px 0;
 }
 .mypostboxtext {
-  justify-content: start;
-  margin: 35px 0 0 20px;
+  display: flex;
+  align-items: center;
 }
-
 .num {
-  width: 37px;
-  height: 24px;
-  margin: 36px 11px 0 8px;
+  margin: 10px 0 0 5px;
   font-family: NotoSansKR;
   font-size: 16px;
   font-weight: 800;
@@ -17,9 +24,6 @@
 }
 
 .all {
-  width: 80px;
-  height: 21px;
-  margin: 39px 14px 0 125px;
   font-family: NotoSansKR;
   font-size: 14px;
   font-weight: 500;
@@ -31,10 +35,10 @@
 .mypostbox {
   width: 350px;
   height: 262px;
-  margin: 28px 20px 0 20px;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
+  margin-bottom: 20px;
 }
 
 .mypostbox button {
@@ -50,7 +54,7 @@
 .logout {
   width: 350px;
   height: 59px;
-  margin: 183px 20px 37px 20px;
+  margin: 30px 0;
   padding: 17px 141px 17px 141px;
   border-radius: 7px;
   border: solid 1px #fd7900;

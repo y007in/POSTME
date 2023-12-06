@@ -1,9 +1,17 @@
 .question {
+  width: 100vw;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
   padding-top: 10px;
 }
+.question_wrap {
+  width: 390px;
+  padding: 0 20px;
+}
+
 .todayq {
-  width: 93px;
-  margin: 35px 81px 21px 20px;
   object-fit: contain;
   font-size: 23px;
   color: #3d3d3d;
@@ -12,9 +20,9 @@
 .qquestion {
   display: flex;
   align-items: center;
-  width: 340px;
+  width: 350px;
   height: 48px;
-  margin: 10px 20px 1px 20px;
+  margin: 10px 0 1px 0;
   border-radius: 7px;
   box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
   background-color: #fff;
@@ -35,9 +43,9 @@
 }
 
 .answer {
-  width: 320px;
+  width: 350px;
   height: 226px;
-  margin: 10px 20px 10px 20px;
+  margin: 10px 0;
   padding: 15px 15px 0 15px;
   border-radius: 7px;
   border: none;
@@ -50,26 +58,9 @@
   color: #3d3d3d;
 }
 
-.fixanswer {
-  width: 350px;
-  height: 226px;
-  margin: 25px 20px 10px 25px;
-  padding: 0 0 0 0;
-  border-radius: 7px;
-  border: none;
-  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
-  background-color: #fff;
-  font-family: NotoSansKR;
-  font-size: 14px;
-  font-weight: 500;
-  line-height: 1.5;
-  color: #3d3d3d;
-}
-
 .sendbutton {
   width: 350px;
   height: 59px;
-  margin: 10px 40px 34px 20px;
   padding: 15px 100px 19px 100px;
   border-radius: 6px;
   border: none;
