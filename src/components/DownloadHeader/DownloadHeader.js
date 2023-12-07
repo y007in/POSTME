@@ -7,7 +7,7 @@ const DownloadHeader = () => {
   const env = process.env;
   env.PUBLIC_URL = env.PUBLIC_URL || "";
   const answerList = store.get("answer") || [];
-  const postboxLength = Math.floor(answerList.length / 1) || 0;
+  const postboxLength = Math.floor(answerList.length / 2) || 0;
   const openbox = new Array(postboxLength).fill(0);
   return (
     <div className="downloadHeader">
