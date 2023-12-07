@@ -5,26 +5,41 @@
   justify-content: center;
   align-items: center;
   padding: 0 20px;
+  margin: 20px 0 50px 0;
 }
 
 .forme .profile {
   width: 78px;
   height: 78px;
-  margin: 37px 156px 11px 156px;
 }
 
-.forme h2 {
-  width: 45px;
-  height: 24px;
-  margin: 0 172px 0 173px;
+.forme .name {
   font-family: NotoSansKR;
   font-size: 15px;
   color: #3d3d3d;
+  text-align: center;
+  margin: 10px 0;
 }
 
 .forme .balloon {
-  margin: 0 66.8px 49px 68px;
-  width: 255.2px;
-  height: 55px;
-  object-fit: contain;
+  position: relative;
+  background-color: #3b3736;
+  color: #fff;
+  padding: 8px 30px;
+  border-radius: 10px;
+  font-weight: bold;
+  font-size: 14px;
+}
+.forme .balloon::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 50%;
+  width: 0;
+  height: 0;
+  border: 10px solid transparent;
+  border-bottom-color: #3b3736;
+  border-top: 0;
+  margin-left: -8px;
+  margin-top: -8px;
 }

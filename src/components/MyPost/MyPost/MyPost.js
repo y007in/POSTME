@@ -20,7 +20,7 @@ const MyPost = () => {
     const shouldLogout = window.confirm("로그아웃하시겠습니까?");
 
     if (shouldLogout) {
-      alert("true 로그아웃되었습니다.");
+      alert("로그아웃되었습니다.");
     }
   };
   return (
@@ -45,7 +45,6 @@ const MyPost = () => {
               src={`${process.env.PUBLIC_URL}Assets/nomailbox.png`}
               alt="nomailicon"
             />
-            <p>아직 우체통이 없어요.</p>
           </div>
         )}
         {openbox.length !== 0 &&

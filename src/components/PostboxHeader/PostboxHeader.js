@@ -15,17 +15,13 @@ const PostboxHeader = (props) => {
   return (
     <div className="first">
       <DownloadHeader />
-      <div className="btns">
-        <button className="share">
-          <img src={`${process.env.PUBLIC_URL}Assets/share.png`} alt="share" />
-        </button>
-        <button className="download" onClick={downloadClickHandler}>
-          <img
-            src={`${process.env.PUBLIC_URL}Assets/download.png`}
-            alt="download"
-          />
-        </button>
-      </div>
+
+      <button className="download" onClick={downloadClickHandler}>
+        <img
+          src={`${process.env.PUBLIC_URL}Assets/download.png`}
+          alt="download"
+        />
+      </button>
     </div>
   );
 };
