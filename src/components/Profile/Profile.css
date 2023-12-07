@@ -12,6 +12,12 @@
   width: 78px;
   height: 78px;
 }
+.forme .profile2 {
+  width: 78px;
+  height: 78px;
+  box-shadow: rgba(100, 100, 111, 0.2) 0px 7px 29px 0px;
+  border-radius: 50%;
+}
 
 .forme .name {
   font-family: NotoSansKR;
