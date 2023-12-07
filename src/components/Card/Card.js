@@ -5,7 +5,7 @@ const Card = (props) => {
 
   return (
     <section className="answerboxContainer">
-      <p>{v?.date || []}</p>
+      <p className="anwerbox_date">{v?.date || []}</p>
       <div className="answerbox">
         <div className="q_question">
           <span>Q</span>

@@ -105,11 +105,8 @@ const Question = () => {
   return (
     <div className="question">
       <div className="question_wrap">
-        <span className="todayq">
-          <img
-            src={`${process.env.PUBLIC_URL}Assets/todayq.png`}
-            alt="todayq"
-          />
+        <span className="title">
+          {!exist ? "오늘의 질문" : "나에게 보낸 편지"}
         </span>
         <div className="qquestion">
           <span>Q</span>

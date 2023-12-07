@@ -27,10 +27,7 @@ const MyPost = () => {
     <main className="mypost">
       <div className="postboxheader">
         <div className="mypostboxtext">
-          <img
-            src={`${process.env.PUBLIC_URL}Assets/postbox.png`}
-            alt="mypostboxtext"
-          />
+          <span className="title">나의 우체통</span>
           <p className="num">({openbox.length}개)</p>
         </div>
 

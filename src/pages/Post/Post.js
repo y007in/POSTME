@@ -1,4 +1,3 @@
-import "./Post.css";
 import store from "store-js";
 import PostboxHeader from "../../components/PostboxHeader/PostboxHeader";
 import { useLocation } from "react-router-dom";
@@ -22,7 +21,7 @@ const Post = () => {
   return (
     <div>
       <PostboxHeader />
-      <main className="box">
+      <main className="post">
         {answerListArr.map((v, i) => {
           const key = `post${i}`;
           return <Card key={key} value={v} />;

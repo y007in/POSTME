@@ -1,18 +1,15 @@
-header {
-  display: flex;
-  justify-content: center;
-  width: 100vw;
-  border-bottom: 1px solid #e5e5e5;
-}
 .header_wrap {
   width: 390px;
-  height: 70px;
+  height: 80px;
   display: flex;
   justify-content: space-between;
   align-items: center;
   padding: 0 20px;
+  border-bottom: 1px solid #e9e9e9;
 }
 header .goToProfile {
+  display: flex;
+  align-items: center;
   background-color: transparent;
   border-color: transparent;
   cursor: pointer;

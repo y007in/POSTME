@@ -1,20 +1,12 @@
-.question {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  padding-top: 10px;
-}
 .question_wrap {
   width: 390px;
   padding: 0 20px;
 }
 
-.todayq {
-  object-fit: contain;
-  font-size: 23px;
+.title {
+  font-size: 24px;
   color: #3d3d3d;
+  font-family: "Black Han Sans", sans-serif;
 }
 
 .qquestion {
@@ -32,6 +24,7 @@
   font-size: 20;
   font-weight: bold;
   margin: 0 10px 0 15px;
+  font-family: "Black Han Sans";
 }
 
 .qq {

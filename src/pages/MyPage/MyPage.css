@@ -1,10 +1,3 @@
-.MyPage {
-  width: 100vw;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-}
-
 .MyPage_profile {
   width: 100%;
   display: flex;
