@@ -8,7 +8,7 @@ const MyPost = () => {
 
   const navigate = useNavigate();
   const answerList = store.get("answer") || [];
-  const postboxLength = Math.floor(answerList.length / 2) || 0;
+  const postboxLength = Math.floor(answerList.length / 10) || 0;
   const openbox = new Array(postboxLength).fill(0);
 
   const postboxClickHandler = (e) => {

@@ -20,7 +20,6 @@ const Download = () => {
     arr[selectBtnValue] = true;
     setIsSelectColor(arr);
   };
-
   return (
     <div className="Download">
       <div className="DownloadHeader_container">

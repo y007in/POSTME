@@ -9,13 +9,15 @@ const Header = () => {
   const answerList = store.get("answer");
 
   const Count = () => {
-    if (answerList === undefined) return "0";
+    if (answerList === undefined) return 0;
+    else if (answerList.length % 10 === 0) return "10";
     else return answerList.length % 10;
   };
 
   const myPageClickHandler = () => {
     navigate("/MyPage");
   };
+  const answerOfTen = Count() !== 0 && Count() % 10 === 0;
 
   return (
     <header>
@@ -31,6 +33,15 @@ const Header = () => {
         <div className="right">
           <progress className="progress" value={Count()} max="10"></progress>
           <p className="progressNum">{Count()}/10</p>
+          {answerOfTen && (
+            <span className="mailBoxBall">
+              <img
+                src={`${process.env.PUBLIC_URL}Assets/yesmailbox.png`}
+                alt="mailIcon"
+              />
+              <p>우체통 생성</p>
+            </span>
+          )}
         </div>
       </div>
     </header>

@@ -16,6 +16,7 @@ header .goToProfile {
   padding: 0;
 }
 header .right {
+  position: relative;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -24,12 +25,43 @@ header .right {
 header .progressNum {
   font-weight: 800;
 }
+header .mailBoxBall {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  top: 25px;
+  right: 0;
+  background-color: #fff;
+  border-radius: 5px;
+  padding: 3px 8px;
+  box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.1);
+  font-size: 12px;
+}
+header .mailBoxBall::after {
+  content: "";
+  position: inherit;
+  top: 3px;
+  right: 25%;
+  width: 0;
+  height: 0;
+  border: 7px solid transparent;
+  border-bottom-color: #fff;
+  border-top: 0;
+  margin-left: -8px;
+  margin-top: -8px;
+}
+.mailBoxBall img {
+  width: 20px;
+  margin-bottom: 3px;
+}
 header .progress {
   background-color: #fd7900;
   border-radius: 10px;
   border: none;
   box-shadow: 0 0 5px 0 rgba(0, 0, 0, 0.1);
 }
+
 header .progress::-webkit-progress-bar {
   background-color: #ffffff;
   border-radius: 10px;

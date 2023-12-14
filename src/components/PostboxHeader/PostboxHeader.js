@@ -15,7 +15,6 @@ const PostboxHeader = (props) => {
   return (
     <div className="first">
       <DownloadHeader />
-
       <button className="download" onClick={downloadClickHandler}>
         <img
           src={`${process.env.PUBLIC_URL}Assets/download.png`}

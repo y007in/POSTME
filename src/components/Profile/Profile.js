@@ -2,7 +2,7 @@ import "./Profile.css";
 import store from "store-js";
 const Profile = () => {
   const answerList = store.get("answer") || [];
-  const postboxLength = Math.floor(answerList.length / 2) || 0;
+  const postboxLength = Math.floor(answerList.length / 10) || 0;
   const openbox = new Array(postboxLength).fill(0);
   return (
     <div className="forme">
