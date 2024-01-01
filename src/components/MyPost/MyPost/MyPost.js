@@ -57,7 +57,6 @@ const MyPost = () => {
             );
           })}
       </div>
-
       <button className="logout" onClick={handleLogout}>
         로그아웃
       </button>

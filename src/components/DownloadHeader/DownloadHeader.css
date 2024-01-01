@@ -1,3 +1,12 @@
+.postHeader {
+  width: 390px;
+  height: 70px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 20px;
+  border-radius: 10px 10px 0 0;
+}
 .downloadHeader {
   display: flex;
   align-items: center;
@@ -8,4 +17,10 @@
   font-weight: bold;
   font-size: 20px;
   font-family: "Black Han Sans";
+}
+
+.download {
+  cursor: pointer;
+  background-color: transparent;
+  border-color: transparent;
 }

@@ -1,7 +1,7 @@
 import store from "store-js";
-import PostboxHeader from "../../components/PostboxHeader/PostboxHeader";
 import { useLocation } from "react-router-dom";
 import Card from "../../components/Card/Card";
+import DownloadHeader from "../../components/DownloadHeader/DownloadHeader";
 
 const Post = () => {
   const answerList = store.get("answer") || [];
@@ -20,7 +20,7 @@ const Post = () => {
 
   return (
     <div>
-      <PostboxHeader />
+      <DownloadHeader />
       <main className="post">
         {answerListArr.map((v, i) => {
           const key = `post${i}`;
