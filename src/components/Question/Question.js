@@ -1,4 +1,3 @@
-import { cloneDeep } from "lodash";
 import { useSelector } from "react-redux";
 import store from "store-js";
 import moment from "moment";
@@ -48,6 +47,7 @@ const Question = () => {
           onChange={(e) => setContent(e.target.value)}
         />
       );
+      console.log(exist);
     } else {
       const selectObj = answerList.find((x) => x.date === selectDate);
 
@@ -73,12 +73,13 @@ const Question = () => {
             onChange={(e) => setContent(e.target.value)}
           />
         );
+        console.log(exist);
       }
     }
     return { selectQuestion, selectAnswer };
   };
   const { selectQuestion, selectAnswer } = readOnlyHandler();
-
+  console.log(exist);
   const submitHandler = () => {
     const submitAnswerObj = {
       id: questionId.id,
@@ -90,7 +91,7 @@ const Question = () => {
     if (answerList === undefined) {
       store.set("answer", [submitAnswerObj]);
     } else {
-      const newAnswer = cloneDeep(answerList);
+      const newAnswer = [...answerList];
       newAnswer.push(submitAnswerObj);
       store.set("answer", newAnswer);
     }
