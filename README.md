@@ -19,4 +19,6 @@ https://drive.google.com/file/d/1ARCrkId512yYxQbNYn08t3daX0yBnuUw/view
 <p>3. 실행</p>
 <p>npm start</p>
 
+<h3>Url</h3>
+https://whale4upostme.netlify.app/
 
