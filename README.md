@@ -2,7 +2,7 @@
 <p>네이버 웨일 대학생 서포터즈 “웨일 대학”에서 다양한 직군들과 <br/>
 ‘하루의 시작, 나를 위한 행복의 틈 Post me'를 네이버 웨일의 확장 앱을 주제로 제작하였습니다.</p>
 
-<a href = "https://whale4upostme.netlify.app/"> 👉 Post me 페이지 바로가기<a/>
+<a href = "https://whale4upostme.netlify.app/" target="_blank"> 👉 Post me 페이지 바로가기<a/>
 
 ![image](https://github.com/user-attachments/assets/4241b874-be5c-4a95-b539-64c34b712d1d)
 
